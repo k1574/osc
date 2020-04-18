@@ -1,1 +1,2 @@
 Oscillate one sample.
+Each directory contains sources for one binary program and mkfile for it.

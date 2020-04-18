@@ -1,20 +1,18 @@
 <mkconfig
+MKSHELL = rc
 
-CFLAGS =
-LDFLAGS = -lm
+DIRS = sin pulse saw
 
-SRC = `{ls *.c}
-TGT = ${SRC:%.c=%}
+all :Q:
 
-all :Q: $TGT 
-	echo -n
-& : &.o
-	$LD $LDFLAGS -o $target $prereq
-%.o :V: %.c
-	$CC $CFLAGS -c -o $target $prereq
-%.c :
-	
-%.h :
-	
-clean :V:
-	rm -rf $TGT *.o
+% :QV:
+	for(d in $DIRS){
+		echo '(cd '$d'; mk '$target')'
+		{ builtin cd $d ; mk $MKFLAGS $stem; cd .. }
+	}
+
+$DIRS :QV:
+	echo '(cd '$target'; mk '$target')'
+	cd $target
+	mk $MKFLAGS $target
+	cd ..
