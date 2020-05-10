@@ -20,5 +20,5 @@ $TGT : $OBJ
 clean :V:
 	rm -rf $TGT *.o
 install :V: $TGT
-	cp $TGT $ROOT/bin
-	chmod 0755 $ROOT/bin/$TGT
+	cp $TGT $BIN
+	chmod 0755 $BIN/$TGT

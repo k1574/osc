@@ -1,2 +1,6 @@
 Oscillate one sample.
 Each directory contains sources for one binary program and mkfile for it.
+Installation:
+	$ mk install
+By default installation happens into "$HOME/local/bin".
+This can be changed in "mkconfig".
