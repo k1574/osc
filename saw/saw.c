@@ -12,6 +12,14 @@ usage()
 }
 
 int
+sign(int a)
+{
+	if(!a)
+		return 0 ;
+	return a<0 ? -1 : 1 ;
+}
+
+int
 main(int argc, char *argv[])
 {
 	int sr;
@@ -25,7 +33,7 @@ main(int argc, char *argv[])
 	}
 
 	for( int i=0 ; i<sr ; ++i ){
-		float amp = (float)i/sr ;
+		float amp = (float)(2*i-sr+1)/(sr-1) ;
 		fwrite(&amp, 4, 1, stdout);
 	}
 

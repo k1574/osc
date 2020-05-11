@@ -26,7 +26,7 @@ main(int argc, char *argv[])
 
 	int sr2 = sr/2 ;
 	for( int i=0 ; i<sr ; ++i ){
-		float amp = (i/sr2) ;
+		float amp = (i/sr2) ? 1 : -1 ;
 		fwrite(&amp, 4, 1, stdout);
 	}
 
