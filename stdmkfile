@@ -1,11 +1,9 @@
-<../mkconfig
-
 CFLAGS =
 LDFLAGS = -lm
 
 SRC = `{ls *.c}
 OBJ = ${SRC:%.c=%.o}
-TGT = sin
+TGT = $NAME
 
 all :Q: $TGT 
 	echo -n
@@ -20,5 +18,5 @@ $TGT : $OBJ
 clean :V:
 	rm -rf $TGT *.o
 install :V: $TGT
-	cp $TGT $BIN
-	chmod 0755 $BIN/$TGT
+	cp $TGT $BIN/osc-$TGT
+	chmod 0755 $BIN/osc-$TGT

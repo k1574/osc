@@ -1,7 +1,7 @@
 <mkconfig
 MKSHELL = rc
 
-DIRS = sin pulse saw
+DIRS = sine pulse saw
 
 all :Q:
 

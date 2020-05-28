@@ -1,6 +1,10 @@
-Oscillate one sample.
-Each directory contains sources for one binary program and mkfile for it.
-Installation:
+# osc
+osc- set of one sample oscillators.
+## Installation:
+``
 	$ mk install
+``
+
+Each directory contains sources for one binary program and mkfile for it.
 By default installation happens into "$HOME/local/bin".
 This can be changed in "mkconfig".
